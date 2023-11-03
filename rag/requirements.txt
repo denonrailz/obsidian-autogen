@@ -1,0 +1,4 @@
+pyautogen[retrievechat]~=0.1.2
+flaml[automl]
+chromadb<0.4.15
+gradio

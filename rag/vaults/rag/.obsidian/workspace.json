@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "0be653439e650424",
+    "type": "split",
+    "children": [
+      {
+        "id": "1181ccbbf5563f70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ac3c32282a11426",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Wellcome dashboard.canvas",
+                "viewState": {
+                  "x": 472.71857664233596,
+                  "y": 628.7580656934309,
+                  "zoom": -0.6773038429363629
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "27239b0a9fee3920",
+    "type": "split",
+    "children": [
+      {
+        "id": "77e451ee3fb525a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f818c41f75c0011",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3319a0876f11e1c3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "91a9412ff69c8ce8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cf92c00ca5a1d224",
+    "type": "split",
+    "children": [
+      {
+        "id": "c79fc4157a5a6694",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2307397160e0c1a3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Wellcome dashboard.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b3ee85f3abb97733",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Wellcome dashboard.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b9d324282b8e5e1e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "88622b2de2b2a521",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Wellcome dashboard.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "8ac3c32282a11426",
+  "lastOpenFiles": [
+    "settings/agent_settings.md",
+    "Wellcome dashboard.canvas",
+    "readme.md",
+    "Knowledges/Getting started.md",
+    "Untitled 1.md",
+    "Untitled.md",
+    "Dataview.md",
+    "prompts/assistant.md",
+    "prompts/proxy_agent.md",
+    "Knowledges/gettingStartedWithCrossplane.md",
+    "Knowledges/deployingapptoGKE.md",
+    "Daily/2023-10-25.md",
+    "Daily/2023-10-31.md",
+    "Logs/0.1/1698333788.md",
+    "Logs/0.2-case02/1698656898.md",
+    "Logs/0.1/1698334320.md",
+    "Logs/0.2-case02/1698335675.md",
+    "Logs/v.0.3-omega/1698930414.md",
+    "Logs/v.0.3-omega/1698930356.md",
+    "Logs/v.0.3-omega/1698930332.md",
+    "Logs/v.0.3-omega/1698759981.md",
+    "Logs/0.2-case02/1698759981.md",
+    "Logs/0.2-case02/1698755603.md",
+    "results/v.0.3-omega/1698931796.md",
+    "results/v.0.3-omega/1698931419.md",
+    "results/v.0.3-omega/1698931321.md",
+    "Logs/v.0.3-omega",
+    "Logs/0.2-case02",
+    "Logs/0.1",
+    "assistant.png"
+  ]
+}

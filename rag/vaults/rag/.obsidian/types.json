@@ -1,0 +1,19 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "type": "text",
+    "completion_tokens": "number",
+    "prompt_tokens": "number",
+    "total_tokens": "number",
+    "started_at": "datetime",
+    "question": "number",
+    "correct_answers": "number",
+    "partial_answers": "number",
+    "wrong_answers": "number",
+    "errors": "number",
+    "results": "number",
+    "finished_at": "datetime"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"cc5c6ea9dc331eac","type":"group","x":-320,"y":240,"width":1000,"height":900,"label":"Evals"},
+		{"id":"f83b528c2523210e","type":"group","x":720,"y":240,"width":480,"height":450,"color":"2","label":"Consumption"},
+		{"id":"f21edfb7c551255a","type":"group","x":720,"y":740,"width":480,"height":400,"color":"4","label":"Knowledges "},
+		{"id":"d48619f93fbf031d","type":"text","text":"```dataview\nTABLE\nfile.folder,\nstarted_at,\nquestions,\ncorrect_answers AS correct,\npartial_answers AS partial,\nwrong_answers AS wrong,\nerrors,\nresults\nFROM \"results\"\nSORT started_at ASC\n```","x":-300,"y":260,"width":960,"height":860},
+		{"id":"2267b9588792f3bf","type":"text","text":"```dataview\nTABLE file.size AS Size\nWHERE type = \"knowledge\"\nSORT file.size DESC\n```","x":740,"y":760,"width":440,"height":340},
+		{"id":"106bb5f8f8947d89","type":"text","text":"```dataview\nTABLE WITHOUT ID\nstarted_at,\ntotal_tokens\nFROM \"logs\"\n```","x":740,"y":260,"width":440,"height":380},
+		{"id":"91a12fe8028ad987","type":"text","text":"# `= [[agent_settings]].agent_name` Dashboard\n`= [[agent_settings]].agent_description`\nversion: *`= [[agent_settings]].agent_version`*","x":-320,"y":40,"width":1520,"height":140,"color":"1"}
+	],
+	"edges":[]
+}
