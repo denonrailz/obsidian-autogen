@@ -4,9 +4,8 @@ import autogen
 import multiprocessing as mp
 from agent_init import initialize_agents
 
-global assistant, ragproxyagent
-
 TIMEOUT = 60
+
 
 def initiate_chat(problem, queue, n_results=3):
     assistant.reset()
@@ -45,6 +44,7 @@ def chatbot_reply(input_text):
             pass
     return messages
 
+
 with gr.Blocks() as demo:
     config_file_path = os.path.join(os.path.dirname(__file__), "OAI_CONFIG_LIST")
     config_list_file = autogen.config_list_from_json(
@@ -63,7 +63,6 @@ with gr.Blocks() as demo:
 
     conversations = {}
     autogen.ChatCompletion.start_logging(conversations)
-    
 
     gr.Markdown("""
     # PAAS Chatbot Demo
