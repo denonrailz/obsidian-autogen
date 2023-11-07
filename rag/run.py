@@ -27,12 +27,16 @@ autogen.ChatCompletion.start_logging()
 questions = agent_init.parse_md_files(os.path.join(agent_init.obsdn_folder, agent_init.obsdn_tests_folder))
 
 test_results = []
+
+
 class QA:
     def __init__(self, question, answer):
         self.question = question
         self.answer = answer
 
+
 qa_list = []
+
 
 def add_qa_item(question, history):
     print(history)
@@ -65,6 +69,7 @@ print("values: ", assistant.chat_messages.values)
 # add_qa_item(qa_problem, assistant.last_message()['content'])
 add_qa_item(qa_problem, assistant.last_message()['content'])
 
+
 def create_md_file(path, filename, qa_list):
     if not os.path.exists(path):
         os.makedirs(path)
@@ -80,4 +85,9 @@ def create_md_file(path, filename, qa_list):
             f.write("##### Q: " + qa.question + "\n")
             f.write("A: " + qa.answer + "\n\n")
 
-create_md_file(agent_init.obsdn_folder+agent_init.obsdn_results_folder+current_version, instanceName, qa_list)
+
+create_md_file(
+    agent_init.obsdn_folder + agent_init.obsdn_results_folder + current_version,
+    instanceName,
+    qa_list
+)

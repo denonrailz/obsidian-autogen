@@ -41,3 +41,6 @@ OAI_CONFIG_LIST
 .cache/
 .cache/**/
 __pycache__/
+
+#pycharm
+.idea

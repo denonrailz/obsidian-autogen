@@ -15,13 +15,15 @@ obsdn_system_prompt = "prompts/assistant.md"
 obsdn_agent_prompt = "prompts/proxy_agent.md"
 obsdn_knowledge_folder = "Knowledges/"
 obsdn_tests_folder = "Tests/case02"
-obsdn_retr_agent_cfg = "settings/RetrivalAgentConfig.md"
+obsdn_retr_agent_cfg = "settings/retrival_agent_config.md"
 obsdn_settings_cfg = "settings/agent_settings.md"
 obsdn_results_folder = "Results/"
+
 
 def retrieve_file(path: str) -> str:
     with open(os.path.join(obsdn_folder, path), "r") as f:
         return f.read()
+
 
 def parse_md_files(folder_path):
     results = []
@@ -50,13 +52,15 @@ def parse_md_files(folder_path):
             results.append(result)
     return results
 
+
 def parse_js_from_md(file_path):
     with open(file_path, 'r') as f:
         content = f.read()
     json_str = re.search('```javascript\n(.*)\n```', content, re.DOTALL).group(1)
     data = json.loads(json_str)
     return data
-    
+
+
 def initialize_agents(config_list):
     
     assistant_settings = parse_js_from_md(obsdn_folder+obsdn_settings_cfg)
@@ -72,7 +76,7 @@ def initialize_agents(config_list):
     assistant = RetrieveAssistantAgent(
         name="assistant",
         system_message=retrieve_file(obsdn_system_prompt),
-        llm_config = llm_config1
+        llm_config=llm_config1
     )
 
     retr_config = parse_js_from_md(obsdn_folder+obsdn_retr_agent_cfg)
