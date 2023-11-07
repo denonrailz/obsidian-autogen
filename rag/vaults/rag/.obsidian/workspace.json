@@ -4,21 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "1181ccbbf5563f70",
+        "id": "a26346aaa1b1863c",
         "type": "tabs",
         "children": [
           {
-            "id": "8ac3c32282a11426",
+            "id": "e0644ca6ba572dac",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Wellcome dashboard.canvas",
-                "viewState": {
-                  "x": 472.71857664233596,
-                  "y": 628.7580656934309,
-                  "zoom": -0.6773038429363629
-                }
+                "file": "results/v.0.3-omega/1698931796.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Wellcome dashboard.canvas",
+                "file": "results/v.0.3-omega/1698931796.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Wellcome dashboard.canvas",
+                "file": "results/v.0.3-omega/1698931796.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Wellcome dashboard.canvas"
+                "file": "results/v.0.3-omega/1698931796.md"
               }
             }
           }
@@ -149,34 +146,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8ac3c32282a11426",
+  "active": "e0644ca6ba572dac",
   "lastOpenFiles": [
-    "settings/agent_settings.md",
+    "results/0.2-case02/1698759981.md",
+    "knowledges/yogi.md",
+    "knowledges/web_design_consultant.md",
+    "knowledges/web_browser.md",
+    "knowledges/virtual_doctor.md",
+    "knowledges/uxui_developer.md",
+    "knowledges/unconstrained_ai_model_dan.md",
+    "knowledges/travel_guide.md",
+    "knowledges/title_generator_for_written_pieces.md",
+    "knowledges/time_travel_guide.md",
+    "knowledges/tic-tac-toe_game.md",
+    "knowledges/text_based_adventure_game.md",
+    "knowledges/technology_transferer.md",
+    "knowledges/tech_writer.md",
+    "knowledges/tech_reviewer:.md",
+    "knowledges/tea-taster.md",
+    "knowledges/talent_coach.md",
+    "knowledges/synonym_finder.md",
+    "knowledges/svg_designer.md",
+    "knowledges/storyteller.md",
+    "knowledges/statistician.md",
+    "knowledges/startup_tech_lawyer.md",
+    "knowledges/startup_idea_generator.md",
+    "knowledges/stand-up_comedian.md",
+    "knowledges/stackoverflow_post.md",
+    "knowledges/sql_terminal.md",
+    "knowledges/result",
+    "knowledges/prompts.txt",
+    "knowledges/split.py",
     "Wellcome dashboard.canvas",
-    "readme.md",
-    "Knowledges/Getting started.md",
-    "Untitled 1.md",
-    "Untitled.md",
-    "Dataview.md",
-    "prompts/assistant.md",
-    "prompts/proxy_agent.md",
-    "Knowledges/gettingStartedWithCrossplane.md",
-    "Knowledges/deployingapptoGKE.md",
-    "Daily/2023-10-25.md",
-    "Daily/2023-10-31.md",
-    "Logs/0.1/1698333788.md",
-    "Logs/0.2-case02/1698656898.md",
-    "Logs/0.1/1698334320.md",
-    "Logs/0.2-case02/1698335675.md",
-    "Logs/v.0.3-omega/1698930414.md",
-    "Logs/v.0.3-omega/1698930356.md",
-    "Logs/v.0.3-omega/1698930332.md",
-    "Logs/v.0.3-omega/1698759981.md",
-    "Logs/0.2-case02/1698759981.md",
-    "Logs/0.2-case02/1698755603.md",
-    "results/v.0.3-omega/1698931796.md",
-    "results/v.0.3-omega/1698931419.md",
-    "results/v.0.3-omega/1698931321.md",
     "Logs/v.0.3-omega",
     "Logs/0.2-case02",
     "Logs/0.1",
