@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "results/0.2-case02/1698759981.md",
+                "file": "results/v.0.3-omega/1698931796.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "results/0.2-case02/1698759981.md",
+                "file": "results/v.0.3-omega/1698931796.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "results/0.2-case02/1698759981.md",
+                "file": "results/v.0.3-omega/1698931796.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "results/0.2-case02/1698759981.md"
+                "file": "results/v.0.3-omega/1698931796.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "e0644ca6ba572dac",
   "lastOpenFiles": [
+    "results/0.2-case02/1698759981.md",
     "knowledges/yogi.md",
     "knowledges/web_design_consultant.md",
     "knowledges/web_browser.md",
@@ -173,7 +174,6 @@
     "knowledges/stand-up_comedian.md",
     "knowledges/stackoverflow_post.md",
     "knowledges/sql_terminal.md",
-    "knowledges/spongebob's_magic_conch_shell.md",
     "knowledges/result",
     "knowledges/prompts.txt",
     "knowledges/split.py",
