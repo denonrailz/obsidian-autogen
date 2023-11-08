@@ -15,7 +15,7 @@ obsdn_system_prompt = "prompts/assistant.md"
 obsdn_agent_prompt = "prompts/proxy_agent.md"
 obsdn_knowledge_folder = "Knowledges/"
 obsdn_tests_folder = "Tests/case02"
-obsdn_retr_agent_cfg = "settings/retrival_agent_config.md"
+obsdn_retr_agent_cfg = "settings/retrieval_agent_config.md"
 obsdn_settings_cfg = "settings/agent_settings.md"
 obsdn_results_folder = "Results/"
 
