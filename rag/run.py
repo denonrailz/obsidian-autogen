@@ -2,8 +2,13 @@ import autogen
 import agent_init
 import os
 import time
-from services import save_logs, get_string_length, add_qa_item, create_md_file
+from datetime import datetime
+from services import (
+    save_logs, get_string_length, add_qa_item, create_md_file, create_logs_data
+)
 
+
+current_datetime = datetime.now()
 instanceName = str(int(time.time())) + '.md'
 
 
@@ -19,7 +24,9 @@ config_list = autogen.config_list_from_json(
 
 assistant, ragproxyagent = agent_init.initialize_agents(config_list)
 
-settings_config = agent_init.parse_js_from_md(agent_init.obsdn_folder+agent_init.obsdn_settings_cfg)
+settings_config = agent_init.parse_js_from_md(
+    agent_init.obsdn_folder + agent_init.obsdn_settings_cfg
+)
 current_version = settings_config["agent_version"]
 
 questions = agent_init.parse_md_files(
@@ -37,8 +44,10 @@ print(f"\n\n>>>>>>>>>>>>  Below are outputs of Case {i+1}  <<<<<<<<<<<<\n\n")
 assistant.reset()    
 qa_problem = questions[i]['question']
 
-autogen.ChatCompletion.start_logging(compact=False)
-ragproxyagent.initiate_chat(assistant, problem=qa_problem, silent=True, n_results=5)
+autogen.ChatCompletion.start_logging(compact=True)
+ragproxyagent.initiate_chat(
+    assistant, problem=qa_problem, silent=True, n_results=5
+)
 
 
 for agent, messages in assistant.chat_messages.items():
@@ -46,18 +55,12 @@ for agent, messages in assistant.chat_messages.items():
         print(message['role'])
         print(message['content'])
 
-print('!!!!!!!!!!!!!print_usage_summary!!!!!!!!!!')
-autogen.ChatCompletion.print_usage_summary()
+# autogen.ChatCompletion.print_usage_summary()
 summary = autogen.ChatCompletion.logged_history
-print(summary)
-# summary_list = list(summary.values())
-# print(summary_list)
-# print(summary_list[0]['cost'])
-# print(summary_list[0]['cost'])
-# print(summary_list[0]['token_count'][0]['prompt_tokens'])
-# print(summary_list[0]['token_count'][0]['total_tokens'])
-# print(summary_list[0]['token_count'][0]['completion_tokens'])
 autogen.ChatCompletion.stop_logging()
+
+logs_data = create_logs_data(summary, current_datetime)
+save_logs(logs_data, current_version)
 
 # print("keys: ", assistant.chat_messages.keys)
 # print("items: ", assistant.chat_messages.items)
