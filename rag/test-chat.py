@@ -11,7 +11,7 @@ def initiate_chat(problem, queue, n_results=3):
     assistant.reset()
     try:
         ragproxyagent.initiate_chat(
-            assistant, problem=problem, silent=False, n_results=n_results
+            assistant, problem=problem, silent=True, n_results=n_results
         )
         messages = ragproxyagent.chat_messages
         messages = [messages[k] for k in messages.keys()][0]
