@@ -1,13 +1,11 @@
 import os
 import time
-from pathlib import Path
 
 current_version = 0.1
 
 
 def save_logs(data, version) -> None:
-    # BASE_DIR = str(Path(__file__).resolve().parent)
-
+    """Writes logs from logs dict to rag/vaults/rag/logs/%version%/%timestamp."""
     timestamp = int(time.time())
     filename = str(timestamp) + '.md'
     path = 'vaults/rag/logs/' + str(version) + '/' + filename
@@ -30,10 +28,9 @@ def save_logs(data, version) -> None:
 
 
 def create_logs_data(summary, current_datetime) -> dict:
+    """Creates dict with logs data from summary from ChatCompletion.logged_history output."""
     summary_list = list(summary.values())
-    print(summary)
-    print(summary_list)
-    # print(summary_list[0]['cost'])
+
     return {
         'completion_tokens': summary_list[0]['token_count'][0]['completion_tokens'],
         'prompt_tokens': summary_list[0]['token_count'][0]['prompt_tokens'],
@@ -57,7 +54,7 @@ def create_md_file(path, filename, qa_list):
     if not os.path.exists(path):
         os.makedirs(path)
 
-    filepath = os.path.join(path, filename + ".md")
+    filepath = os.path.join(path, filename)
     with open(filepath, "w") as f:
         f.write("---\n")
         f.write("started_at: " + str(int(time.time())) + "\n")
