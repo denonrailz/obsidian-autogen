@@ -3,9 +3,7 @@ import agent_init
 import os
 import time
 from datetime import datetime
-from services import (
-    save_logs, get_string_length, add_qa_item, create_md_file, create_logs_data
-)
+from utils import save_logs, add_qa_item, create_md_file, create_logs_data
 
 
 current_datetime = datetime.now()
@@ -33,11 +31,8 @@ questions = agent_init.parse_md_files(
     os.path.join(agent_init.obsdn_folder, agent_init.obsdn_tests_folder)
 )
 
-test_results = []
 qa_list = []
 
-
-# for i in range(len(questions)):
 i = 0
 print(f"\n\n>>>>>>>>>>>>  Below are outputs of Case {i+1}  <<<<<<<<<<<<\n\n")
 
@@ -55,17 +50,13 @@ for agent, messages in assistant.chat_messages.items():
         print(message['role'])
         print(message['content'])
 
-# autogen.ChatCompletion.print_usage_summary()
+
 summary = autogen.ChatCompletion.logged_history
 autogen.ChatCompletion.stop_logging()
 
 logs_data = create_logs_data(summary, current_datetime)
 save_logs(logs_data, current_version)
 
-# print("keys: ", assistant.chat_messages.keys)
-# print("items: ", assistant.chat_messages.items)
-# print("values: ", assistant.chat_messages.values)
-# add_qa_item(qa_problem, assistant.last_message()['content'])
 add_qa_item(qa_problem, assistant.last_message()['content'])
 
 
