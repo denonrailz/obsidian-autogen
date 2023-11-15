@@ -5,14 +5,14 @@ import asyncio
 config_list = [
     {
         "model": "gpt-3.5-turbo",
-        # "api_key": "<YOUR KEY HERE>"
+        # "api_key": "YOUR API KEY"
     }
 ]
 llm_config_assistant = {
     "model": "gpt-3.5-turbo",
     "temperature": 0,
     "config_list": config_list,
-        "functions": [
+    "functions": [
         {
             "name": "search_db",
             "description": "Search database for order status",
@@ -28,7 +28,7 @@ llm_config_assistant = {
                         "description": "Customer number",
                     }
                 },
-                "required": ["order_number","customer_number"],
+                "required": ["order_number", "customer_number"],
             },
         },
     ],
@@ -78,6 +78,6 @@ class AutogenChat():
             message=message
         )
 
-    #MOCH Function call
+    # MOCH Function call
     def search_db(self, order_number=None, customer_number=None):
         return "Order status: delivered TERMINATE"

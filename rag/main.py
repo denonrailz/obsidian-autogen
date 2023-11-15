@@ -1,5 +1,6 @@
 # to test this code
 # add your openai key to the config_list on autogen_chat.py
+# and to .env file
 # run the following code in the same directory
 # python main.py
 # access http://localhost:8000
@@ -104,6 +105,7 @@ async def send_to_client(autogen_chat: AutogenChat):
         autogen_chat.client_receive_queue.task_done()
         await asyncio.sleep(0.05)
 
+
 async def receive_from_client(autogen_chat: AutogenChat):
     while True:
         data = await autogen_chat.websocket.receive_text()
@@ -113,6 +115,7 @@ async def receive_from_client(autogen_chat: AutogenChat):
             break
         await autogen_chat.client_sent_queue.put(data)
         await asyncio.sleep(0.05)
+
 
 @app.websocket("/ws/{chat_id}")
 async def websocket_endpoint(websocket: WebSocket, chat_id: str):
@@ -132,4 +135,4 @@ async def websocket_endpoint(websocket: WebSocket, chat_id: str):
             pass
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
