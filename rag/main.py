@@ -23,8 +23,9 @@ from dotenv import load_dotenv, find_dotenv
 import openai
 import os
 
+from rag.utils import get_html
 
-_ = load_dotenv(find_dotenv()) # read local .env file
+_ = load_dotenv(find_dotenv())  # read local .env file
 openai.api_key = os.environ['OPENAI_API_KEY']
 # openai.log='debug'
 
@@ -32,49 +33,17 @@ openai.api_key = os.environ['OPENAI_API_KEY']
 app = FastAPI()
 app.autogen_chat = {}
 
+
+@app.get("/hello/")
+def hello():
+    print('Hello world!')
+    return 'Hello world!'
+
+
 @app.get("/")
 async def get(request: Request):
     chat_id = str(uuid.uuid1())
-    html = f"""
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Chat</title>
-    </head>
-    <body>
-        <h1>WebSocket Chat</h1>
-        <h2>Your ID: <span id="ws-id"></span></h2>
-        <form action="" onsubmit="sendMessage(event)">
-            <input type="text" id="messageText" autocomplete="off"/>
-            <button>Send</button>
-        </form>
-        <ul id='messages'>
-        </ul>
-        <script>
-            function showMessage(msg) {{
-                var messages = document.getElementById('messages')
-                var message = document.createElement('li')
-                var content = document.createTextNode(msg)
-                message.appendChild(content)
-                messages.appendChild(message)
-            }};
-            var chat_id = "{chat_id}"
-            document.querySelector("#ws-id").textContent = chat_id;
-            var ws = new WebSocket("ws://localhost:8000/ws/{chat_id}");
-            ws.onmessage = function(event) {{
-                showMessage(event.data)
-            }};
-            function sendMessage(event) {{
-                var input = document.getElementById("messageText")
-                ws.send(input.value)
-                showMessage(input.value)
-                input.value = ''
-                event.preventDefault()
-            }}
-        </script>
-    </body>
-</html>
-"""
+    html = get_html(chat_id)
     return HTMLResponse(html)
 
 
