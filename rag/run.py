@@ -39,7 +39,7 @@ print(f"\n\n>>>>>>>>>>>>  Below are outputs of Case {i+1}  <<<<<<<<<<<<\n\n")
 assistant.reset()    
 qa_problem = questions[i]['question']
 
-autogen.ChatCompletion.start_logging(compact=True)
+# autogen.ChatCompletion.start_logging(compact=True)
 ragproxyagent.initiate_chat(
     assistant, problem=qa_problem, silent=True, n_results=5
 )
@@ -51,11 +51,11 @@ for agent, messages in assistant.chat_messages.items():
         print(message['content'])
 
 
-summary = autogen.ChatCompletion.logged_history
-autogen.ChatCompletion.stop_logging()
-
-logs_data = create_logs_data(summary, current_datetime)
-save_logs(logs_data, current_version)
+# summary = autogen.ChatCompletion.logged_history
+# autogen.ChatCompletion.stop_logging()
+#
+# logs_data = create_logs_data(summary, current_datetime)
+# save_logs(logs_data, current_version)
 
 add_qa_item(qa_problem, assistant.last_message()['content'])
 

@@ -1,3 +1,0 @@
-# Task solving examples
-
-WIP
