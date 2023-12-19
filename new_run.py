@@ -7,12 +7,7 @@ from utils import read_jsonl, create_timestamp_folder
 
 current_timestamp = str(int(time.time()))
 results_folder = 'results/' + current_timestamp
-
-
-def main():
-    # read_jsonl()
-    create_timestamp_folder(results_folder)
-
+logs_folder = 'logs/' + current_timestamp
 
 config_list = autogen.config_list_from_json(
     env_or_file=os.path.join(os.path.dirname(__file__), "OAI_CONFIG_LIST"),
@@ -24,11 +19,16 @@ config_list = autogen.config_list_from_json(
     },
 )
 
-client = OpenAIWrapper(config_list=config_list)
-response = client.create(messages=[{"role": "user", "content": "2+2="}])
 
-print(client.extract_text_or_completion_object(response))
+def main(config):
+    print(read_jsonl()[0]['input'])
+    create_timestamp_folder(results_folder)
+    create_timestamp_folder(logs_folder)
+    client = OpenAIWrapper(config_list=config)
+    response = client.create(messages=read_jsonl()[0]['input'])
+
+    print(client.extract_text_or_completion_object(response))
 
 
 if __name__ == "__main__":
-    main()
+    main(config_list)
