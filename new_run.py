@@ -30,5 +30,22 @@ def main(config):
     print(client.extract_text_or_completion_object(response))
 
 
+def get_response():
+    # обращаемся к автогену и получаем ответ
+    response = 'response'
+    return response
+
+
+def save_logs():
+    # сохранить в json фейковый ответ
+    pass
+
+
+def eval():
+    # придумать формат файла оценки
+    # выдать фейковую оценку
+    pass
+
+
 if __name__ == "__main__":
     main(config_list)
