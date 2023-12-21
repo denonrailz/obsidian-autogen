@@ -34,6 +34,7 @@ Thumbs.db
 
 OAI_CONFIG_LIST
 preferences/OAI_CONFIG_LIST
+rag/OAI_CONFIG_LIST
 
 /.venv/
 # Cache #
